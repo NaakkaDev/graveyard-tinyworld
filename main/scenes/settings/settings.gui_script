@@ -1,0 +1,123 @@
+local monarch   = require("monarch.monarch")
+local druid     = require("druid.druid")
+
+local const     = require("main.core.const")
+local settings  = require("main.settings.settings")
+local gui_utils = require("main.utils.gui")
+
+
+---Set audio defaults.
+---@param self any
+---@param args any
+---@param button any
+local function on_audio_default_click(self, args, button)
+    settings.set_default(const.AUDIO)
+
+    for group, value in pairs(settings.get(const.AUDIO)) do
+        self.volume_sliders[group]:set(value)
+    end
+end
+
+---Volume settings logic.
+---@param self any
+local function volume_settings(self)
+    -- Don't make noise yet or the "volume:set below will trigger it"
+    local allow_sfx = false
+
+    self.volume_sliders = {}
+
+    -- VOLUME SLIDERS
+    for index, volume_group in ipairs(const.SETTINGS.VOLUME_GROUPS) do
+        local slider = self.druid:new_slider(volume_group .. "_slider_pin", vmath.vector3(70, 0, 0), function(_, value)
+            -- Display the value (0-100)
+            gui.set_text(gui.get_node(volume_group .. "_slider_text"), math.ceil(value * 100))
+
+            -- Save the new volume into settings
+            settings.set(const.AUDIO .. "." .. volume_group, value)
+            -- Set the new volume now!
+            -- FIXME: Uncomment when all the sound groups exist
+            sound.set_group_gain(volume_group, value)
+
+            -- Play the sfx sound, only once at a time
+            if allow_sfx then
+                if volume_group == "sfx" then
+                    allow_sfx = false
+                    sound.play(msg.url(nil, "audio", "test"), nil, function(_self, message_id, message, sender)
+                        if message_id == const.HASH.SOUND_DONE then
+                            allow_sfx = true
+                        end
+                    end)
+                elseif volume_group == "gui" then
+                    allow_sfx = false
+                    sound.play(msg.url(nil, "gui_audio", "confirm"), nil, function(_self, message_id, message, sender)
+                        if message_id == const.HASH.SOUND_DONE then
+                            allow_sfx = true
+                        end
+                    end)
+                end
+            end
+        end)
+
+        slider:set(settings.get(const.AUDIO .. "." .. volume_group))
+        slider:set_input_node(volume_group .. "_slider_input")
+
+        self.volume_sliders[volume_group] = slider
+    end
+
+    -- Now its fine to make sfx noise when poking the sfx slider
+    allow_sfx = true
+
+    self.druid:new_button("btn_audio_default", on_audio_default_click)
+    -- my_ui.new_button(self.druid, "btn_audio_default", nil, on_audio_default_click, nil,
+    -- "text_audio_default")
+end
+
+function init(self)
+    gui.set_render_order(15)
+
+    msg.post(".", "acquire_input_focus")
+
+    self.druid = druid.new(self)
+
+    volume_settings(self)
+
+    self.druid:new_button("btn_back", function(_self, args, button)
+        monarch.back()
+    end)
+end
+
+function final(self)
+    self.druid:final()
+end
+
+function update(self, dt)
+    self.druid:update(dt)
+end
+
+function on_message(self, message_id, message, sender)
+    self.druid:on_message(message_id, message, sender)
+end
+
+function on_input(self, action_id, action)
+    if action.value == 1 then
+        if action_id == const.INPUT.MOUSE_WHEEL_UP then
+            -- Mouse wheel up (+ volume)
+            for group, _ in pairs(self.volume_sliders) do
+                -- Move the volume slider if the mouse is on top of the gui node
+                if gui_utils.touch_gui(group .. "_slider_input", action.screen_x, action.screen_y) then
+                    self.volume_sliders[group]:set(settings.get(const.AUDIO .. "." .. group) + 0.01)
+                end
+            end
+        elseif action_id == const.INPUT.MOUSE_WHEEL_DOWN then
+            -- Mouse wheel down (- volume)
+            for group, _ in pairs(self.volume_sliders) do
+                -- Move the volume slider if the mouse is on top of the gui node
+                if gui_utils.touch_gui(group .. "_slider_input", action.screen_x, action.screen_y) then
+                    self.volume_sliders[group]:set(settings.get(const.AUDIO .. "." .. group) - 0.01)
+                end
+            end
+        end
+    end
+
+    return self.druid:on_input(action_id, action)
+end

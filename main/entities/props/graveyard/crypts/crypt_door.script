@@ -1,0 +1,40 @@
+local DOOR_OPEN_EASING = vmath.vector({ 0, 0.2, 0.35, 0.5, 0.6, 0.7, 0.7, 0.8, 0.9, 1, 1.05, 1.1, 1.15, 1.2, 1.15, 1.1, 1.05, 1.03, 1.01, 1 })
+local DOOR_CLOSE_EASING = vmath.vector({ 0, 0.2, 0.35, 0.5, 0.6, 0.7, 0.7, 0.8, 0.9, 1 })
+
+
+
+
+
+local function open()
+	go.animate(".", "euler.y", go.PLAYBACK_ONCE_FORWARD, -100, DOOR_OPEN_EASING, 0.7)
+end
+
+local function close()
+	go.animate(".", "euler.y", go.PLAYBACK_ONCE_FORWARD, 0, DOOR_CLOSE_EASING, 0.5)
+end
+
+
+
+function init(self)
+	timer.delay(1, false, open)
+
+	timer.delay(3, false, close)
+end
+
+function final(self)
+end
+
+function update(self, dt)
+end
+
+function fixed_update(self, dt)
+end
+
+function on_message(self, message_id, message, sender)
+end
+
+function on_input(self, action_id, action)
+end
+
+function on_reload(self)
+end

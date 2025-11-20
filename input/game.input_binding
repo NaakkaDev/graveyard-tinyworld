@@ -1,0 +1,60 @@
+key_trigger {
+  input: KEY_1
+  action: "key_1"
+}
+key_trigger {
+  input: KEY_2
+  action: "key_2"
+}
+key_trigger {
+  input: KEY_3
+  action: "key_3"
+}
+key_trigger {
+  input: KEY_4
+  action: "key_4"
+}
+key_trigger {
+  input: KEY_5
+  action: "key_5"
+}
+key_trigger {
+  input: KEY_6
+  action: "key_6"
+}
+key_trigger {
+  input: KEY_KP_1
+  action: "key_np_1"
+}
+key_trigger {
+  input: KEY_KP_2
+  action: "key_np_2"
+}
+key_trigger {
+  input: KEY_KP_3
+  action: "key_np_3"
+}
+key_trigger {
+  input: KEY_KP_4
+  action: "key_np_4"
+}
+key_trigger {
+  input: KEY_KP_5
+  action: "key_np_5"
+}
+key_trigger {
+  input: KEY_KP_6
+  action: "key_np_6"
+}
+mouse_trigger {
+  input: MOUSE_BUTTON_1
+  action: "touch"
+}
+mouse_trigger {
+  input: MOUSE_WHEEL_UP
+  action: "mouse_wheel_up"
+}
+mouse_trigger {
+  input: MOUSE_WHEEL_DOWN
+  action: "mouse_wheel_down"
+}

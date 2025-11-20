@@ -1,0 +1,10 @@
+font: "/assets/fonts/JosefinSans-Bold.ttf"
+material: "/builtins/fonts/font-df.material"
+size: 32
+outline_alpha: 1.0
+outline_width: 2.0
+shadow_x: 6.0
+shadow_y: -6.0
+output_format: TYPE_DISTANCE_FIELD
+render_mode: MODE_MULTI_LAYER
+characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\354\204\240\353\213\230\345\260\272"

@@ -1,0 +1,105 @@
+local lumiere   = require("lumiere.lumiere")
+local rain      = require("assets.effects.rain.rain")
+
+local constants = require("light_and_shadows.constants")
+local light     = require("light_and_shadows.light")
+
+
+go.property("sun_color", vmath.vector4(0.5, 0.5, 0.5, 0))
+go.property("shadow", vmath.vector4(0.5, 0.5, 0.2, 0))
+go.property("clear_color", vmath.vector4(0.8, 0.8, 0.8, 1))
+go.property("fog_color", vmath.vector4(0.8, 0.8, 0.8, 0.7))
+go.property("ambient", vmath.vector4(0.8, 0.8, 0.8, 1))
+
+
+
+local function set(self)
+	constants.sun_color.x    = self.sun_color.x
+	constants.sun_color.y    = self.sun_color.y
+	constants.sun_color.z    = self.sun_color.z
+	constants.shadow_color.x = self.shadow.x
+	constants.shadow_color.y = self.shadow.y
+	constants.shadow_color.z = self.shadow.z
+	constants.fog_color.x    = self.fog_color.x
+	constants.fog_color.y    = self.fog_color.y
+	constants.fog_color.z    = self.fog_color.z
+	constants.fog_color.w    = self.fog_color.w
+	constants.ambient.x      = self.ambient.x
+	constants.ambient.y      = self.ambient.y
+	constants.ambient.z      = self.ambient.z
+	-- constants.ambient.w = self.ambient.w
+	constants.clear_color.x  = self.clear_color.x
+	constants.clear_color.y  = self.clear_color.y
+	constants.clear_color.z  = self.clear_color.z
+end
+
+
+local NIGHT_COLOR     = vmath.vector4(-0.3, -0.1, 0.15, 0)
+local NIGHT_FOG       = vmath.vector4(0.15, 0.2, 0.4, 0.3)
+local NIGHT_CLEAR     = vmath.vector4(0.15, 0.2, 0.4, 0)
+local NIGHT_SHADOW    = vmath.vector4(0.2, 0.2, 0.1, 0)
+local NIGHT_AMBIENT   = vmath.vector4(0.2, 0.2, 0.4, 1.1)
+local THUNDER_AMBIENT = vmath.vector4(0.4, 0.4, 0.6, 1.1)
+
+
+local T_DISTANT = vmath.vector({ 0.0, 0.5, 0.2, 0.35, 0.1, 0.2, 0.0 })
+local T_STRONG  = vmath.vector({ 0.0, 1.0, 0.3, 0.95, 0.2, 0.7, 0.1, 0.5, 0.0 })
+local T_NORMAL  = vmath.vector({ 0.0, 0.9, 0.4, 0.8, 0.3, 0.6, 0.2, 0.4, 0.1, 0.25, 0.0 })
+local T_EASINGS = {
+	T_DISTANT, T_DISTANT, T_DISTANT, T_NORMAL, T_DISTANT, T_STRONG, T_DISTANT, T_NORMAL, T_DISTANT,
+}
+
+
+local function set_night()
+	go.set("#", "sun_color", NIGHT_COLOR)
+	go.set("#", "shadow", NIGHT_SHADOW)
+	go.set("#", "clear_color", NIGHT_CLEAR)
+	go.set("#", "fog_color", NIGHT_FOG)
+	go.set("#", "ambient", NIGHT_AMBIENT)
+end
+
+
+---Start thunder, keeps going forever.
+---@param self any
+local function thunder(self)
+	self.thunder_index = (self.thunder_index or 0) + 1
+
+	if self.thunder_index > #T_EASINGS then
+		self.thunder_index = 1
+	end
+
+	local delay = math.random(8, 20)
+	local easing = T_EASINGS[self.thunder_index]
+
+	logger:debug("Thunder in " .. delay .. " seconds.", { tindex = self.thunder_index })
+
+	timer.delay(delay, false, function()
+		go.animate("#", "ambient", go.PLAYBACK_ONCE_FORWARD, THUNDER_AMBIENT, easing, 0.9, 0, function()
+			thunder(self)
+		end)
+	end)
+end
+
+
+function init(self)
+	lumiere.use_effects({ rain })
+
+	set_night()
+
+	go.animate("#", "ambient", go.PLAYBACK_ONCE_FORWARD, THUNDER_AMBIENT, T_EASINGS[1], 0.9, 2, function()
+		thunder(self)
+	end)
+end
+
+
+function update(self, dt)
+	set(self)
+end
+
+
+function final(self)
+end
+
+
+function on_message(self, message_id, message, sender)
+end

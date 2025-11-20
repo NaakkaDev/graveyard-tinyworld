@@ -1,0 +1,10 @@
+images {
+  image: "/assets/images/gui/buttons/button_empty.png"
+}
+images {
+  image: "/assets/images/gui/panel_empty.png"
+}
+images {
+  image: "/assets/images/Icon/SoundOn.png"
+}
+extrude_borders: 2

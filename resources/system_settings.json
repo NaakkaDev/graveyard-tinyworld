@@ -1,0 +1,15 @@
+{
+    "db": {
+        "paths": {
+            "Items": "/resources/db/items.json"
+        }
+    },
+    "settings": {
+        "audio": {
+            "master": 0.5,
+            "music": 0.3,
+            "sfx": 0.5,
+            "gui": 0.5
+        }
+    }
+}

@@ -1,0 +1,26 @@
+name: "menu"
+instances {
+  id: "audio"
+  prototype: "/main/scenes/game/audio/audio.go"
+}
+instances {
+  id: "gui_audio"
+  prototype: "/main/scenes/game/audio/gui_audio.go"
+}
+instances {
+  id: "music"
+  prototype: "/main/scenes/game/audio/music.go"
+}
+scale_along_z: 0
+embedded_instances {
+  id: "gui"
+  data: "components {\n"
+  "  id: \"monarch\"\n"
+  "  component: \"/main/scenes/menu/menu.gui\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"menu\"\n"
+  "  component: \"/main/scenes/menu/menu.script\"\n"
+  "}\n"
+  ""
+}

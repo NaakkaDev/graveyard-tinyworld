@@ -1,0 +1,9 @@
+local settings = require("main.settings.settings")
+local audio = require("main.core.audio")
+
+function init(self)
+	-- Set the audio group volumes.
+	settings.set_group_volumes()
+
+	audio.play_music("menu_music_01")
+end

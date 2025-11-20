@@ -1,0 +1,26 @@
+components {
+  id: "script"
+  component: "/main/entities/props/graveyard/crypts/crypt_door.script"
+}
+embedded_components {
+  id: "door"
+  type: "model"
+  data: "mesh: \"/assets/models/props/graveyard/crypts/crypt-large-door.glb\"\n"
+  "skeleton: \"/assets/models/props/graveyard/crypts/crypt-large-door.glb\"\n"
+  "animations: \"/assets/models/props/graveyard/crypts/crypt-large-door.glb\"\n"
+  "default_animation: \"open\"\n"
+  "name: \"{{NAME}}\"\n"
+  "materials {\n"
+  "  name: \"colormap\"\n"
+  "  material: \"/light_and_shadows/materials/model/model_instanced.material\"\n"
+  "  textures {\n"
+  "    sampler: \"tex0\"\n"
+  "    texture: \"/assets/models/props/graveyard/colormap.png\"\n"
+  "  }\n"
+  "  textures {\n"
+  "    sampler: \"tex1\"\n"
+  "    texture: \"/assets/models/props/graveyard/colormap.png\"\n"
+  "  }\n"
+  "}\n"
+  ""
+}

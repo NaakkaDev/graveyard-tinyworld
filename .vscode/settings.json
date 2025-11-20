@@ -1,0 +1,98 @@
+{
+    "[lua]": {
+        "editor.defaultFormatter": "sumneko.lua"
+    },
+    "Lua.runtime.version": "Lua 5.1",
+    "Lua.runtime.pathStrict": true,
+    "Lua.window.statusBar": false,
+    "Lua.completion.callSnippet": "Replace",
+    "Lua.completion.keywordSnippet": "Replace",
+    "Lua.completion.showWord": "Fallback",
+    "Lua.completion.autoRequire": false,
+    "Lua.diagnostics.libraryFiles": "Disable",
+    "Lua.diagnostics.disable": [
+        "lowercase-global",
+        "redefined-local"
+    ],
+    "Lua.workspace.library": [
+        "~/.config/Code/User/globalStorage/astronachos.defold",
+        "~/.config/Code/User/workspaceStorage/3788d2023151c3d6961c937ad77e09ac/astronachos.defold",
+        ".defold/api",
+        "~/.config/Code/User/workspaceStorage/f5043d24bad48592ea1b52ad4b855b3b/astronachos.defold",
+        "~/.config/Code/User/workspaceStorage/fb344775b4164deb82a2226a1f00897d/astronachos.defold",
+        ".defold/assets"
+    ],
+    "glsllint.additionalStageAssociations": {
+        ".fp": "frag",
+        ".vp": "vert"
+    },
+    "files.associations": {
+        "*.project": "ini",
+        "*.script": "lua",
+        "*.gui_script": "lua",
+        "*.render_script": "lua",
+        "*.editor_script": "lua",
+        "*.fp": "glsl",
+        "*.vp": "glsl",
+        "*.go": "textproto",
+        "*.animationset": "textproto",
+        "*.atlas": "textproto",
+        "*.buffer": "json",
+        "*.camera": "textproto",
+        "*.collection": "textproto",
+        "*.collectionfactory": "textproto",
+        "*.collectionproxy": "textproto",
+        "*.collisionobject": "textproto",
+        "*.display_profiles": "textproto",
+        "*.factory": "textproto",
+        "*.gamepads": "textproto",
+        "*.gui": "textproto",
+        "*.input_binding": "textproto",
+        "*.label": "textproto",
+        "*.material": "textproto",
+        "*.mesh": "textproto",
+        "*.model": "textproto",
+        "*.particlefx": "textproto",
+        "*.render": "textproto",
+        "*.sound": "textproto",
+        "*.spinemodel": "textproto",
+        "*.spinescene": "textproto",
+        "*.sprite": "textproto",
+        "*.texture_profiles": "textproto",
+        "*.tilemap": "textproto",
+        "*.tilesource": "textproto",
+        "*.manifest": "textproto",
+        "*.appmanifest": "yaml",
+        "*.script_api": "yaml",
+        "ext.manifest": "yaml",
+        "*.lua_": "lua"
+    },
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.showKeywords": false,
+    "Lua.workspace.ignoreDir": [
+        ".vscode",
+        ".defold/api",
+        "build"
+    ],
+    "Lua.diagnostics.ignoredFiles": "Disable",
+    "Lua.diagnostics.globals": [
+        "init",
+        "final",
+        "update",
+        "fixed_update",
+        "on_message",
+        "on_input",
+        "on_reload"
+    ],
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "undefined/**": true,
+        "**/build/**": true,
+        "patches/": true,
+        "**/*.collection": true,
+        "**/*.atlas": true,
+        "**/icon_*.png": true
+    }
+}

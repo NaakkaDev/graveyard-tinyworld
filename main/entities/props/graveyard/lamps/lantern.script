@@ -1,0 +1,28 @@
+local const = require("main.core.const")
+
+
+function init(self)
+	-- Keeper hand offset position
+	local lanter_pos = vmath.vector3(-5, -4.8, 1)
+	go.set_position(lanter_pos)
+	go.set_scale(vmath.vector3(0.5))
+end
+
+
+function final(self)
+end
+
+
+function update(self, dt)
+end
+
+
+function fixed_update(self, dt)
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == const.HASH.SET_PARENT then
+		go.set_parent(".", message.parent, false)
+	end
+end

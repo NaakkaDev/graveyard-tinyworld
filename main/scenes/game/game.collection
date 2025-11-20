@@ -1,0 +1,1396 @@
+name: "game"
+instances {
+  id: "sun"
+  prototype: "/light_and_shadows/props/sun.go"
+  children: "moon_sun"
+  position {
+    x: 250.0
+    y: 250.0
+    z: 100.0
+  }
+  component_properties {
+    id: "sun"
+    properties {
+      id: "color"
+      value: "0.5, 0.5, 0.5, 0.0"
+      type: PROPERTY_TYPE_VECTOR4
+    }
+    properties {
+      id: "shadow"
+      value: "0.5, 0.5, 0.2, 0.0"
+      type: PROPERTY_TYPE_VECTOR4
+    }
+    properties {
+      id: "far"
+      value: "1000.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "PROJECTION_RESOLUTION"
+      value: "1000.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "static"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "max_lights"
+      value: "8.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
+}
+instances {
+  id: "keeper"
+  prototype: "/main/entities/characters/keeper.go"
+  position {
+    x: 123.0
+    y: 1.0
+    z: 116.0
+  }
+  rotation {
+    x: 7.48938E-15
+    y: 0.9093299
+    z: 4.6264775E-16
+    w: 0.4160759
+  }
+}
+instances {
+  id: "rocks"
+  prototype: "/main/entities/props/graveyard/ground/rocks.go"
+  position {
+    x: 61.042393
+    z: 77.0
+  }
+  rotation {
+    y: 0.22495106
+    w: 0.97437006
+  }
+}
+instances {
+  id: "iron-fence-border"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 72.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border-column"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border-column.go"
+  position {
+    x: 72.0
+    z: -20.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border-curve"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border-curve.go"
+  position {
+    x: 72.0
+    z: 60.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-debris"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-debris.go"
+  position {
+    x: 136.0
+    z: 82.0
+  }
+}
+instances {
+  id: "gravestone-decorative"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-decorative.go"
+  position {
+    x: 72.0
+    z: -24.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-round"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 72.0
+    z: 40.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-bevel"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-bevel.go"
+  position {
+    x: 72.0
+    z: 8.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "grave"
+  prototype: "/main/entities/props/graveyard/graves/grave.go"
+  position {
+    x: 136.0
+    z: -14.0
+  }
+}
+instances {
+  id: "debris"
+  prototype: "/main/entities/props/graveyard/ground/debris.go"
+  position {
+    x: 137.53084
+    z: 68.0
+  }
+}
+instances {
+  id: "coffin-old"
+  prototype: "/main/entities/props/graveyard/graves/coffin-old.go"
+  position {
+    x: 136.0
+    y: -0.9
+    z: 98.0
+  }
+}
+instances {
+  id: "iron-fence-border1"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 72.0
+    z: 20.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border2"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 72.0
+    z: 40.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border3"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 92.0
+    z: 73.0
+  }
+}
+instances {
+  id: "iron-fence-border4"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 112.0
+    z: 73.0
+  }
+}
+instances {
+  id: "iron-fence-border-column1"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border-column.go"
+  position {
+    x: 173.0
+    z: 73.0
+  }
+}
+instances {
+  id: "iron-fence-damaged"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-damaged.go"
+  position {
+    x: 132.4675
+    z: 73.0
+  }
+  scale3 {
+    x: 1.04
+  }
+}
+instances {
+  id: "gravestone-round1"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 72.0
+    z: 24.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-round2"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 72.0
+    z: -8.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-round3"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 120.0
+    z: 20.0
+  }
+}
+instances {
+  id: "gravestone-bevel1"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-bevel.go"
+  position {
+    x: 136.0
+    z: 20.0
+  }
+}
+instances {
+  id: "gravestone-decorative1"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-decorative.go"
+  position {
+    x: 152.0
+    z: 20.0
+  }
+}
+instances {
+  id: "gravestone-round4"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 120.0
+    z: 2.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round5"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 152.0
+    z: 2.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round6"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 136.0
+    z: 2.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "road"
+  prototype: "/main/entities/props/graveyard/roads/road.go"
+  position {
+    x: 23.0
+    y: -0.5
+    z: -42.0
+  }
+}
+instances {
+  id: "road1"
+  prototype: "/main/entities/props/graveyard/roads/road.go"
+  position {
+    x: 103.0
+    y: -0.5
+    z: -44.0
+  }
+}
+instances {
+  id: "road2"
+  prototype: "/main/entities/props/graveyard/roads/road.go"
+  position {
+    x: 77.0
+    y: -0.5
+    z: -42.0
+  }
+}
+instances {
+  id: "road3"
+  prototype: "/main/entities/props/graveyard/roads/road.go"
+  position {
+    x: 50.0
+    y: -0.5
+    z: -44.0
+  }
+  rotation {
+    y: 0.70710677
+    w: -0.70710677
+  }
+}
+instances {
+  id: "bench-damaged"
+  prototype: "/main/entities/props/graveyard/bench-damaged.go"
+  position {
+    x: 132.0
+    y: -15.0
+    z: 58.0
+  }
+  rotation {
+    y: -1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "bench"
+  prototype: "/main/entities/props/graveyard/bench.go"
+  position {
+    x: 57.0
+    z: 8.0
+  }
+  rotation {
+    y: -0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "pine-crooked"
+  prototype: "/main/entities/props/graveyard/trees/pine-crooked.go"
+  position {
+    x: 78.847206
+    z: 79.0
+  }
+  rotation {
+    x: 0.04889311
+    y: -0.13216422
+    z: -0.037517004
+    w: 0.98931015
+  }
+}
+instances {
+  id: "road4"
+  prototype: "/main/entities/props/graveyard/roads/road.go"
+  position {
+    x: 129.0
+    y: -0.5
+    z: -42.0
+  }
+}
+instances {
+  id: "gravestone-round8"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 120.0
+    z: 82.0
+  }
+}
+instances {
+  id: "gravestone-round9"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 104.0
+    z: 82.0
+  }
+}
+instances {
+  id: "gravestone-decorative2"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-decorative.go"
+  position {
+    x: 152.0
+    z: 82.0
+  }
+}
+instances {
+  id: "grave-border3"
+  prototype: "/main/entities/props/graveyard/graves/grave-border.go"
+  position {
+    x: 136.0
+    z: 97.0
+  }
+  scale3 {
+    x: 1.3
+    y: 1.2
+    z: 0.9
+  }
+}
+instances {
+  id: "grave1"
+  prototype: "/main/entities/props/graveyard/graves/grave.go"
+  position {
+    x: 88.0
+    z: 40.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-bevel5"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-bevel.go"
+  position {
+    x: 168.0
+    z: 82.0
+  }
+}
+instances {
+  id: "iron-fence-border5"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 153.0
+    z: 73.0
+  }
+}
+instances {
+  id: "gravestone-decorative3"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-decorative.go"
+  position {
+    x: 168.0
+    z: 2.0
+  }
+}
+instances {
+  id: "gravestone-round10"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 168.0
+    z: 20.0
+  }
+}
+instances {
+  id: "iron-fence-border6"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 78.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "debris1"
+  prototype: "/main/entities/props/graveyard/ground/debris.go"
+  position {
+    x: 130.53084
+    z: 63.0
+  }
+  rotation {
+    y: 0.38268343
+    w: 0.9238795
+  }
+}
+instances {
+  id: "iron-fence-border7"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 98.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border8"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 103.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border9"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 143.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border10"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 158.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border11"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 178.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border13"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 55.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border14"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 35.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "gravestone-round11"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 120.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "grave3"
+  prototype: "/main/entities/props/graveyard/graves/grave.go"
+  position {
+    x: 120.0
+    z: 141.0
+  }
+}
+instances {
+  id: "gravestone-round12"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 136.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round13"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 152.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round14"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 168.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round15"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 104.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "pine24"
+  prototype: "/main/entities/props/graveyard/trees/pine.go"
+  position {
+    x: 88.0
+    z: 96.0
+  }
+  rotation {
+    y: 0.24355213
+    w: 0.9698878
+  }
+  scale3 {
+    x: 0.3
+    y: 0.3
+    z: 0.3
+  }
+}
+instances {
+  id: "gravestone-round16"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 56.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round17"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 88.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round18"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 40.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "gravestone-round19"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 72.0
+    z: 158.0
+  }
+  rotation {
+    y: 1.0
+    w: 6.123234E-17
+  }
+}
+instances {
+  id: "bench1"
+  prototype: "/main/entities/props/graveyard/bench.go"
+  position {
+    x: 190.0
+    z: 94.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "lantern-keeper"
+  prototype: "/main/entities/props/graveyard/lamps/lantern-keeper.go"
+}
+instances {
+  id: "debris-wood"
+  prototype: "/main/entities/props/graveyard/ground/debris-wood.go"
+  position {
+    x: 138.97069
+    y: 2.0
+    z: 98.0
+  }
+  rotation {
+    x: 0.7600088
+    y: 0.64463294
+    z: 0.018817304
+    w: 0.08050352
+  }
+  scale3 {
+    x: 0.7
+    y: 0.7
+    z: 0.7
+  }
+}
+instances {
+  id: "debris-wood1"
+  prototype: "/main/entities/props/graveyard/ground/debris-wood.go"
+  position {
+    x: 130.97069
+    y: 2.0
+    z: 98.0
+  }
+  rotation {
+    x: 0.2790373
+    y: 0.09640177
+    z: 0.818414
+    w: 0.49299425
+  }
+  scale3 {
+    x: 0.7
+    y: 0.7
+    z: 0.7
+  }
+}
+instances {
+  id: "debris-wood2"
+  prototype: "/main/entities/props/graveyard/ground/debris-wood.go"
+  position {
+    x: 143.97069
+    y: 0.5
+    z: 104.0
+  }
+  rotation {
+    x: 0.9659258
+    y: -1.5848096E-17
+    z: 0.25881904
+    w: 5.9145895E-17
+  }
+  scale3 {
+    x: 0.7
+    y: 0.7
+    z: 0.7
+  }
+}
+instances {
+  id: "iron-fence-border-gate"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border-gate.go"
+  position {
+    x: 187.0
+    z: 123.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "shovel"
+  prototype: "/main/entities/props/graveyard/shovel.go"
+  position {
+    x: 86.0
+    z: 83.0
+  }
+  rotation {
+    x: 0.579228
+    y: -0.40557978
+    z: 0.40557978
+    w: 0.579228
+  }
+}
+instances {
+  id: "iron-fence-border12"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: 15.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border15"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: -45.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border16"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: -5.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border17"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: -25.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "iron-fence-border18"
+  prototype: "/main/entities/props/graveyard/walls/iron-fence-border.go"
+  position {
+    x: 187.0
+    z: -65.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "pine25"
+  prototype: "/main/entities/props/graveyard/trees/pine.go"
+  position {
+    x: 237.0
+    z: 41.0
+  }
+  scale3 {
+    x: 0.9
+    y: 0.9
+    z: 0.9
+  }
+}
+instances {
+  id: "pine26"
+  prototype: "/main/entities/props/graveyard/trees/pine.go"
+  position {
+    x: 244.0
+    z: 113.0
+  }
+  rotation {
+    y: -0.123439185
+    w: 0.9923521
+  }
+}
+instances {
+  id: "pine27"
+  prototype: "/main/entities/props/graveyard/trees/pine.go"
+  position {
+    x: 249.0
+    y: -1.0
+    z: 77.0
+  }
+  scale3 {
+    x: 0.7
+    y: 0.7
+    z: 0.7
+  }
+}
+instances {
+  id: "gravestone-bevel2"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-bevel.go"
+  position {
+    x: 136.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-decorative4"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-decorative.go"
+  position {
+    x: 152.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-round7"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 120.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-round20"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 168.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-bevel3"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-bevel.go"
+  position {
+    x: 56.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-decorative5"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-decorative.go"
+  position {
+    x: 72.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-round21"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 40.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-round22"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 88.0
+    z: 176.0
+  }
+}
+instances {
+  id: "gravestone-round23"
+  prototype: "/main/entities/props/graveyard/graves/gravestone-round.go"
+  position {
+    x: 104.0
+    z: 176.0
+  }
+}
+instances {
+  id: "rocks-tall1"
+  prototype: "/main/entities/props/graveyard/ground/rocks-tall.go"
+  position {
+    x: 52.8481
+    z: 52.0
+  }
+  rotation {
+    y: -0.11320321
+    w: 0.9935719
+  }
+}
+instances {
+  id: "shovel-dirt"
+  prototype: "/main/entities/props/graveyard/shovel-dirt.go"
+  position {
+    x: 32.0
+    z: 82.0
+  }
+  rotation {
+    y: 0.34202015
+    w: 0.9396926
+  }
+}
+instances {
+  id: "grave2"
+  prototype: "/main/entities/props/graveyard/graves/grave.go"
+  position {
+    x: 39.0
+    z: 70.0
+  }
+  scale3 {
+    x: 2.0
+    y: 2.0
+  }
+}
+instances {
+  id: "trunk-long"
+  prototype: "/main/entities/props/graveyard/trees/trunk-long.go"
+  position {
+    x: 48.0
+    z: -20.0
+  }
+  rotation {
+    y: 0.25881904
+    w: 0.9659258
+  }
+}
+instances {
+  id: "lumiere"
+  prototype: "/.defold/assets/lumiere/lumiere.go"
+}
+instances {
+  id: "grain"
+  prototype: "/lumiere/effects/grain/grain.go"
+}
+instances {
+  id: "rain"
+  prototype: "/assets/effects/rain/rain.go"
+}
+instances {
+  id: "lightpost-single"
+  prototype: "/main/entities/props/graveyard/lamps/lightpost-single.go"
+  position {
+    x: 192.0
+    z: 150.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "lightpost-single1"
+  prototype: "/main/entities/props/graveyard/lamps/lightpost-single.go"
+  position {
+    x: 192.0
+    z: 50.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "lightpost-single2"
+  prototype: "/main/entities/props/graveyard/lamps/lightpost-single.go"
+  position {
+    x: 192.0
+    z: -50.0
+  }
+  rotation {
+    y: 0.70710677
+    w: 0.70710677
+  }
+}
+instances {
+  id: "lantern-candle"
+  prototype: "/main/entities/props/graveyard/lamps/lantern-candle.go"
+  position {
+    x: 75.0
+    z: 40.0
+  }
+  rotation {
+    y: 0.34202015
+    w: 0.9396926
+  }
+  scale3 {
+    x: 0.5
+    y: 0.5
+    z: 0.5
+  }
+}
+instances {
+  id: "candle-multiple-off"
+  prototype: "/main/entities/props/graveyard/lamps/candle-multiple-off.go"
+  position {
+    x: 75.0
+    z: 35.0
+  }
+  rotation {
+    y: 0.5
+    w: 0.8660254
+  }
+  scale3 {
+    x: 0.5
+    y: 0.3
+    z: 0.5
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "gui"
+  data: "components {\n"
+  "  id: \"monarch\"\n"
+  "  component: \"/main/scenes/game/game.gui\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "game"
+  data: "components {\n"
+  "  id: \"game\"\n"
+  "  component: \"/main/scenes/game/game.script\"\n"
+  "}\n"
+  "components {\n"
+  "  id: \"light_setting\"\n"
+  "  component: \"/light_and_shadows/light_setting.script\"\n"
+  "  properties {\n"
+  "    id: \"fog_density\"\n"
+  "    value: \"0.7\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"fog_min_max\"\n"
+  "    value: \"200.0, 1000.0, 1.0, 1.0\"\n"
+  "    type: PROPERTY_TYPE_VECTOR4\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"ambient\"\n"
+  "    value: \"0.4, 0.4, 0.3, 0.0\"\n"
+  "    type: PROPERTY_TYPE_VECTOR4\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"color_max\"\n"
+  "    value: \"1.1\"\n"
+  "    type: PROPERTY_TYPE_NUMBER\n"
+  "  }\n"
+  "  properties {\n"
+  "    id: \"on\"\n"
+  "    value: \"true\"\n"
+  "    type: PROPERTY_TYPE_BOOLEAN\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    z: 0.1
+  }
+}
+embedded_instances {
+  id: "camera"
+  data: "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: 0.1\\n"
+  "far_z: 1000.0\\n"
+  "auto_aspect_ratio: 1\\n"
+  "orthographic_projection: 1\\n"
+  "orthographic_zoom: 8.0\\n"
+  "\"\n"
+  "}\n"
+  ""
+  position {
+    x: 180.0
+    y: 70.0
+    z: 170.0
+  }
+  rotation {
+    x: -0.25
+    y: 0.25
+    z: 0.0669873
+    w: 0.9330127
+  }
+}
+embedded_instances {
+  id: "ground"
+  children: "tilemap"
+  data: ""
+}
+embedded_instances {
+  id: "lights"
+  children: "light_controller"
+  children: "lightpost-single"
+  children: "lightpost-single1"
+  children: "lightpost-single2"
+  children: "sun"
+  data: ""
+}
+embedded_instances {
+  id: "tilemap"
+  data: "components {\n"
+  "  id: \"tw\"\n"
+  "  component: \"/assets/tiles/tinyworld.tilemap\"\n"
+  "}\n"
+  ""
+  position {
+    x: -160.0
+    z: 160.0
+  }
+  rotation {
+    x: -0.70710677
+    w: 0.70710677
+  }
+}
+embedded_instances {
+  id: "light_controller"
+  data: "components {\n"
+  "  id: \"light_controller\"\n"
+  "  component: \"/main/scenes/game/light_controller.script\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "moon_sun"
+  data: "embedded_components {\n"
+  "  id: \"aura\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"light_a\\\"\\n"
+  "material: \\\"/light_and_shadows/materials/fog_sprite/billboard/billboard_fog_sprite_linear.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ADD\\n"
+  "size {\\n"
+  "  x: 70.0\\n"
+  "  y: 74.0\\n"
+  "}\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/assets/main.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"default_animation: \\\"sun\\\"\\n"
+  "material: \\\"/light_and_shadows/materials/fog_sprite/billboard/billboard_fog_sprite_nearest.material\\\"\\n"
+  "size {\\n"
+  "  x: 15.0\\n"
+  "  y: 15.0\\n"
+  "}\\n"
+  "textures {\\n"
+  "  sampler: \\\"texture_sampler\\\"\\n"
+  "  texture: \\\"/assets/main.atlas\\\"\\n"
+  "}\\n"
+  "\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "objects"
+  children: "bench"
+  children: "bench-damaged"
+  children: "bench1"
+  children: "debris"
+  children: "debris-wood"
+  children: "debris-wood1"
+  children: "debris-wood2"
+  children: "debris1"
+  children: "rocks"
+  children: "shovel"
+  data: ""
+}
+embedded_instances {
+  id: "fences"
+  children: "iron-fence-border"
+  children: "iron-fence-border-column"
+  children: "iron-fence-border-column1"
+  children: "iron-fence-border-curve"
+  children: "iron-fence-border-gate"
+  children: "iron-fence-border1"
+  children: "iron-fence-border10"
+  children: "iron-fence-border11"
+  children: "iron-fence-border12"
+  children: "iron-fence-border13"
+  children: "iron-fence-border14"
+  children: "iron-fence-border15"
+  children: "iron-fence-border16"
+  children: "iron-fence-border17"
+  children: "iron-fence-border18"
+  children: "iron-fence-border2"
+  children: "iron-fence-border3"
+  children: "iron-fence-border4"
+  children: "iron-fence-border5"
+  children: "iron-fence-border6"
+  children: "iron-fence-border7"
+  children: "iron-fence-border8"
+  children: "iron-fence-border9"
+  children: "iron-fence-damaged"
+  data: ""
+}
+embedded_instances {
+  id: "graves"
+  children: "coffin-old"
+  children: "grave"
+  children: "grave-border3"
+  children: "grave1"
+  children: "grave3"
+  children: "gravestone-bevel"
+  children: "gravestone-bevel1"
+  children: "gravestone-bevel2"
+  children: "gravestone-bevel3"
+  children: "gravestone-bevel5"
+  children: "gravestone-debris"
+  children: "gravestone-decorative"
+  children: "gravestone-decorative1"
+  children: "gravestone-decorative2"
+  children: "gravestone-decorative3"
+  children: "gravestone-decorative4"
+  children: "gravestone-decorative5"
+  children: "gravestone-round"
+  children: "gravestone-round1"
+  children: "gravestone-round10"
+  children: "gravestone-round11"
+  children: "gravestone-round12"
+  children: "gravestone-round13"
+  children: "gravestone-round14"
+  children: "gravestone-round15"
+  children: "gravestone-round16"
+  children: "gravestone-round17"
+  children: "gravestone-round18"
+  children: "gravestone-round19"
+  children: "gravestone-round2"
+  children: "gravestone-round20"
+  children: "gravestone-round21"
+  children: "gravestone-round22"
+  children: "gravestone-round23"
+  children: "gravestone-round3"
+  children: "gravestone-round4"
+  children: "gravestone-round5"
+  children: "gravestone-round6"
+  children: "gravestone-round7"
+  children: "gravestone-round8"
+  children: "gravestone-round9"
+  data: ""
+}
+embedded_instances {
+  id: "roads"
+  children: "road"
+  children: "road1"
+  children: "road2"
+  children: "road3"
+  children: "road4"
+  data: ""
+  position {
+    y: -2.0
+  }
+}
+embedded_instances {
+  id: "trees"
+  children: "pine-crooked"
+  children: "pine24"
+  children: "pine25"
+  children: "pine26"
+  children: "pine27"
+  data: ""
+}
+embedded_instances {
+  id: "crypts"
+  data: ""
+}
+embedded_instances {
+  id: "altar"
+  data: ""
+}

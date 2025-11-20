@@ -1,0 +1,18 @@
+embedded_components {
+  id: "model"
+  type: "model"
+  data: "mesh: \"/assets/models/props/graveyard/graves/grave-border.glb\"\n"
+  "name: \"{NAME}\"\n"
+  "materials {\n"
+  "  name: \"colormap\"\n"
+  "  material: \"/light_and_shadows/materials/model/skinned/model_skinned_instanced.material\"\n"
+  "  textures {\n"
+  "    sampler: \"tex0\"\n"
+  "    texture: \"/assets/models/props/graveyard/colormap.png\"\n"
+  "  }\n"
+  "  textures {\n"
+  "    sampler: \"tex1\"\n"
+  "    texture: \"/assets/models/props/graveyard/colormap.png\"\n"
+  "  }\n"
+  "}\n"
+  ""}

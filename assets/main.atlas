@@ -1,0 +1,74 @@
+images {
+  image: "/assets/images/light_and_shadow/light_a.png"
+}
+images {
+  image: "/assets/images/light_and_shadow/shadow.png"
+}
+images {
+  image: "/assets/images/light_and_shadow/shadow2.png"
+}
+images {
+  image: "/assets/images/light_and_shadow/moon.png"
+}
+images {
+  image: "/assets/images/light_and_shadow/sun.png"
+}
+animations {
+  id: "firea"
+  images {
+    image: "/assets/images/fire/fire1.png"
+  }
+  images {
+    image: "/assets/images/fire/fire2.png"
+  }
+  images {
+    image: "/assets/images/fire/fire3.png"
+  }
+  images {
+    image: "/assets/images/fire/fire4.png"
+  }
+  images {
+    image: "/assets/images/fire/fire5.png"
+  }
+  images {
+    image: "/assets/images/fire/fire6.png"
+  }
+  images {
+    image: "/assets/images/fire/fire7.png"
+  }
+  images {
+    image: "/assets/images/fire/fire8.png"
+  }
+  images {
+    image: "/assets/images/fire/fire9.png"
+  }
+  images {
+    image: "/assets/images/fire/fire10.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 10
+}
+animations {
+  id: "lantern"
+  images {
+    image: "/assets/images/lantern_light-1.png"
+  }
+  images {
+    image: "/assets/images/lantern_light-2.png"
+  }
+  images {
+    image: "/assets/images/lantern_light-3.png"
+  }
+  images {
+    image: "/assets/images/lantern_light-5.png"
+  }
+  images {
+    image: "/assets/images/lantern_light-6.png"
+  }
+  images {
+    image: "/assets/images/lantern_light-7.png"
+  }
+  playback: PLAYBACK_LOOP_PINGPONG
+  fps: 5
+}
+extrude_borders: 2

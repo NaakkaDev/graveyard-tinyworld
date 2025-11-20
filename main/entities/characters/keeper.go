@@ -1,0 +1,26 @@
+components {
+  id: "script"
+  component: "/main/entities/characters/keeper.script"
+}
+embedded_components {
+  id: "model"
+  type: "model"
+  data: "mesh: \"/assets/models/characters/character-male-b.glb\"\n"
+  "skeleton: \"/assets/models/characters/character-male-b.glb\"\n"
+  "animations: \"/assets/models/characters/character-male-b.glb\"\n"
+  "default_animation: \"walk\"\n"
+  "name: \"{{NAME}}\"\n"
+  "materials {\n"
+  "  name: \"colormap\"\n"
+  "  material: \"/light_and_shadows/materials/model/skinned/model_skinned_instanced.material\"\n"
+  "  textures {\n"
+  "    sampler: \"tex0\"\n"
+  "    texture: \"/assets/models/characters/colormap.png\"\n"
+  "  }\n"
+  "  textures {\n"
+  "    sampler: \"tex1\"\n"
+  "    texture: \"/assets/models/characters/colormap.png\"\n"
+  "  }\n"
+  "}\n"
+  ""
+}

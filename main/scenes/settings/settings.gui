@@ -1,0 +1,687 @@
+script: "/main/scenes/settings/settings.gui_script"
+fonts {
+  name: "default"
+  font: "/assets/fonts/default.font"
+}
+textures {
+  name: "gui"
+  texture: "/assets/gui.atlas"
+}
+nodes {
+  size {
+    x: 960.0
+    y: 540.0
+  }
+  type: TYPE_BOX
+  id: "root"
+  pivot: PIVOT_SW
+  inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    x: 20.0
+    y: 520.0
+  }
+  size {
+    x: 400.0
+    y: 400.0
+  }
+  type: TYPE_BOX
+  texture: "gui/panel_empty"
+  id: "settings"
+  pivot: PIVOT_NW
+  parent: "root"
+  slice9 {
+    x: 22.0
+    y: 80.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    x: 20.0
+    y: -20.0
+  }
+  size {
+    x: 360.0
+    y: 360.0
+  }
+  color {
+    x: 0.8
+    y: 0.8
+    z: 0.8
+  }
+  type: TYPE_BOX
+  id: "audio"
+  pivot: PIVOT_NW
+  parent: "settings"
+  inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    y: -25.0
+  }
+  scale {
+    x: 0.75
+    y: 0.75
+  }
+  size {
+    x: 500.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "AUDIO SETTINGS"
+  font: "default"
+  id: "text_audio"
+  pivot: PIVOT_W
+  parent: "audio"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 210.0
+    y: -93.0
+  }
+  size {
+    x: 150.0
+    y: 8.0
+  }
+  color {
+    x: 0.6
+    y: 0.6
+    z: 0.6
+  }
+  type: TYPE_BOX
+  id: "master_slider"
+  parent: "audio"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 6.0
+    z: 6.0
+  }
+}
+nodes {
+  position {
+    x: -70.0
+  }
+  scale {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  size {
+    x: 88.0
+    y: 88.0
+  }
+  color {
+    y: 0.0
+  }
+  type: TYPE_BOX
+  texture: "gui/button_empty"
+  id: "master_slider_pin"
+  parent: "master_slider"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 22.0
+    y: 22.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    x: 118.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 100.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "50"
+  font: "default"
+  id: "master_slider_text"
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "master_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  size {
+    x: 300.0
+    y: 45.0
+  }
+  type: TYPE_BOX
+  id: "master_slider_input"
+  parent: "master_slider"
+  inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    x: -206.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 200.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "Master"
+  font: "default"
+  id: "text_master_title"
+  pivot: PIVOT_W
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "master_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 210.0
+    y: -137.0
+  }
+  size {
+    x: 150.0
+    y: 8.0
+  }
+  color {
+    x: 0.6
+    y: 0.6
+    z: 0.6
+  }
+  type: TYPE_BOX
+  id: "music_slider"
+  parent: "audio"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 6.0
+    z: 6.0
+  }
+}
+nodes {
+  position {
+    x: -70.0
+  }
+  scale {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  size {
+    x: 88.0
+    y: 88.0
+  }
+  color {
+    y: 0.0
+  }
+  type: TYPE_BOX
+  texture: "gui/button_empty"
+  id: "music_slider_pin"
+  parent: "music_slider"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 22.0
+    y: 22.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    x: 118.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 100.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "50"
+  font: "default"
+  id: "music_slider_text"
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "music_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  size {
+    x: 300.0
+    y: 45.0
+  }
+  type: TYPE_BOX
+  id: "music_slider_input"
+  parent: "music_slider"
+  inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    x: -206.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 200.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "Music"
+  font: "default"
+  id: "text_music_title"
+  pivot: PIVOT_W
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "music_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 210.0
+    y: -181.0
+  }
+  size {
+    x: 150.0
+    y: 8.0
+  }
+  color {
+    x: 0.6
+    y: 0.6
+    z: 0.6
+  }
+  type: TYPE_BOX
+  id: "sfx_slider"
+  parent: "audio"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 6.0
+    z: 6.0
+  }
+}
+nodes {
+  position {
+    x: -70.0
+  }
+  scale {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  size {
+    x: 88.0
+    y: 88.0
+  }
+  color {
+    y: 0.0
+  }
+  type: TYPE_BOX
+  texture: "gui/button_empty"
+  id: "sfx_slider_pin"
+  parent: "sfx_slider"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 22.0
+    y: 22.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    x: 118.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 100.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "50"
+  font: "default"
+  id: "sfx_slider_text"
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "sfx_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  size {
+    x: 300.0
+    y: 45.0
+  }
+  type: TYPE_BOX
+  id: "sfx_slider_input"
+  parent: "sfx_slider"
+  inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    x: -206.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 200.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "Effects"
+  font: "default"
+  id: "text_sfx_title"
+  pivot: PIVOT_W
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "sfx_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 210.0
+    y: -225.0
+  }
+  size {
+    x: 150.0
+    y: 8.0
+  }
+  color {
+    x: 0.6
+    y: 0.6
+    z: 0.6
+  }
+  type: TYPE_BOX
+  id: "gui_slider"
+  parent: "audio"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 6.0
+    z: 6.0
+  }
+}
+nodes {
+  position {
+    x: -70.0
+  }
+  scale {
+    x: 0.2
+    y: 0.2
+    z: 0.2
+  }
+  size {
+    x: 88.0
+    y: 88.0
+  }
+  color {
+    y: 0.0
+  }
+  type: TYPE_BOX
+  texture: "gui/button_empty"
+  id: "gui_slider_pin"
+  parent: "gui_slider"
+  layer: "image"
+  inherit_alpha: true
+  slice9 {
+    x: 22.0
+    y: 22.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    x: 118.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 100.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "50"
+  font: "default"
+  id: "gui_slider_text"
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "gui_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  size {
+    x: 300.0
+    y: 45.0
+  }
+  type: TYPE_BOX
+  id: "gui_slider_input"
+  parent: "gui_slider"
+  inherit_alpha: true
+  visible: false
+}
+nodes {
+  position {
+    x: -206.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 200.0
+    y: 60.0
+  }
+  type: TYPE_TEXT
+  text: "GUI"
+  font: "default"
+  id: "text_gui_title"
+  pivot: PIVOT_W
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+  parent: "gui_slider"
+  layer: "text"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 82.0
+    y: -326.0
+  }
+  size {
+    x: 160.0
+    y: 64.0
+  }
+  type: TYPE_BOX
+  texture: "gui/button_empty"
+  id: "btn_audio_default"
+  parent: "audio"
+  inherit_alpha: true
+  slice9 {
+    x: 22.0
+    y: 22.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    y: 2.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 300.0
+    y: 100.0
+  }
+  color {
+    x: 0.898
+    y: 0.145
+    z: 0.329
+  }
+  type: TYPE_TEXT
+  text: "SET DEFAULT"
+  font: "default"
+  id: "text_audio_default"
+  parent: "btn_audio_default"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 298.0
+    y: -326.0
+  }
+  size {
+    x: 120.0
+    y: 64.0
+  }
+  type: TYPE_BOX
+  texture: "gui/button_empty"
+  id: "btn_back"
+  parent: "audio"
+  inherit_alpha: true
+  slice9 {
+    x: 22.0
+    y: 22.0
+    z: 22.0
+    w: 22.0
+  }
+}
+nodes {
+  position {
+    y: 2.0
+  }
+  scale {
+    x: 0.5
+    y: 0.5
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.898
+    y: 0.145
+    z: 0.329
+  }
+  type: TYPE_TEXT
+  text: "BACK"
+  font: "default"
+  id: "text_back"
+  parent: "btn_back"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+}
+nodes {
+  position {
+    x: 16.0
+    y: 320.0
+  }
+  size {
+    x: 300.0
+    y: 50.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Settings"
+  font: "default"
+  id: "text_settings"
+  pivot: PIVOT_W
+  parent: "settings"
+  inherit_alpha: true
+  outline_alpha: 0.0
+  shadow_alpha: 0.0
+  enabled: false
+}
+layers {
+  name: "image"
+}
+layers {
+  name: "text"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1,0 +1,73 @@
+[bootstrap]
+main_collection = /main/scenes/main/main.collectionc
+render = /light_and_shadows/render/default.renderc
+
+[script]
+shared_state = 1
+
+[display]
+width = 1280
+height = 720
+high_dpi = 1
+samples = 4
+
+[android]
+input_method = HiddenInputField
+
+[html5]
+scale_mode = stretch
+
+[project]
+title = graveyard-tinyworld
+version = 0.1
+custom_resources = resources/
+dependencies#0 = https://github.com/Insality/defold-log/archive/refs/tags/6.zip
+dependencies#1 = https://github.com/britzl/monarch/archive/master.zip
+dependencies#2 = https://github.com/Insality/druid/archive/refs/heads/master.zip
+dependencies#3 = https://github.com/Insality/defold-event/archive/refs/tags/12.zip
+dependencies#4 = https://github.com/Insality/defold-tweener/archive/refs/tags/5.zip
+dependencies#5 = https://github.com/Insality/defold-saver/archive/refs/tags/5.zip
+dependencies#6 = https://github.com/d954mas/defold-chronos/archive/refs/tags/1.0.1.zip
+dependencies#7 = https://github.com/baochungit/defold-wrap/archive/master.zip
+dependencies#8 = https://github.com/selimanac/defold-astar/archive/master.zip
+dependencies#9 = https://github.com/britzl/lumiere/archive/master.zip
+
+[graphics]
+default_texture_min_filter = nearest
+default_texture_mag_filter = nearest
+
+[collection_proxy]
+max_count = 16
+
+[profiler]
+enabled = 0
+
+[event]
+memory_threshold_warning = 50
+
+[squid]
+app_catalog = game-template/logs
+log_file_name = squid_log_file
+log_file_extension = log
+is_enabled = 1
+is_enabled_in_release = 1
+is_printing = 1
+is_saving = 1
+is_adding_timestamp = 1
+is_using_allowlist = 1
+days_to_delete_logs = 7
+min_log_level = 1
+unsaved_logs_buffer = 30
+max_data_length = 1000
+max_data_depth = 5
+
+[saver]
+save_name = game.json
+save_folder = game-template
+autosave_timer = 3
+saver_key = saver
+storage_key = storage
+
+[model]
+max_count = 256
+
