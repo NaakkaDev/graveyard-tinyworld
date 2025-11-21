@@ -11,8 +11,8 @@ local M                  = {}
 local INSTANCE_METATABLE = { __index = M }
 
 
-local AMBIENT_DISTANT = vmath.vector4(0.4, 0.4, 0.6, 1.1)
-local AMBIENT_STRONG  = vmath.vector4(0.6, 0.6, 0.8, 1.3)
+local AMBIENT_DISTANT = vmath.vector4(0.3, 0.3, 0.5, 1.1)
+local AMBIENT_STRONG  = vmath.vector4(0.5, 0.5, 0.7, 1.3)
 
 local EASING_DISTANT  = vmath.vector({ 0.0, 0.5, 0.2, 0.35, 0.1, 0.2, 0.0 })
 local EASING_STRONG   = vmath.vector({ 0.0, 1.0, 0.3, 0.95, 0.2, 0.7, 0.1, 0.5, 0.0 })
