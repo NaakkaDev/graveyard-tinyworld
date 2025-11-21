@@ -1,3 +1,4 @@
+local audio = require("main.core.audio")
 local const = require("main.core.const")
 
 
@@ -5,6 +6,10 @@ function init(self)
 	-- "Attach" lanter to keepers hand.
 	local parent = model.get_go("/keeper#model", "arm-right")
 	msg.post("/lantern-keeper#script", const.HASH.SET_PARENT, { parent = parent })
+
+	audio.play_music("music_01")
+
+	sound.play("main:/audio#rain")
 end
 
 

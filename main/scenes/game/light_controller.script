@@ -3,6 +3,7 @@ local rain      = require("assets.effects.rain.rain")
 
 local constants = require("light_and_shadows.constants")
 local light     = require("light_and_shadows.light")
+local thunder   = require("main.scenes.game.thunder")
 
 
 go.property("sun_color", vmath.vector4(0.5, 0.5, 0.5, 0))
@@ -34,20 +35,11 @@ local function set(self)
 end
 
 
-local NIGHT_COLOR     = vmath.vector4(-0.3, -0.1, 0.15, 0)
-local NIGHT_FOG       = vmath.vector4(0.15, 0.2, 0.4, 0.3)
-local NIGHT_CLEAR     = vmath.vector4(0.15, 0.2, 0.4, 0)
-local NIGHT_SHADOW    = vmath.vector4(0.2, 0.2, 0.1, 0)
-local NIGHT_AMBIENT   = vmath.vector4(0.2, 0.2, 0.4, 1.1)
-local THUNDER_AMBIENT = vmath.vector4(0.4, 0.4, 0.6, 1.1)
-
-
-local T_DISTANT = vmath.vector({ 0.0, 0.5, 0.2, 0.35, 0.1, 0.2, 0.0 })
-local T_STRONG  = vmath.vector({ 0.0, 1.0, 0.3, 0.95, 0.2, 0.7, 0.1, 0.5, 0.0 })
-local T_NORMAL  = vmath.vector({ 0.0, 0.9, 0.4, 0.8, 0.3, 0.6, 0.2, 0.4, 0.1, 0.25, 0.0 })
-local T_EASINGS = {
-	T_DISTANT, T_DISTANT, T_DISTANT, T_NORMAL, T_DISTANT, T_STRONG, T_DISTANT, T_NORMAL, T_DISTANT,
-}
+local NIGHT_COLOR   = vmath.vector4(-0.3, -0.1, 0.15, 0)
+local NIGHT_FOG     = vmath.vector4(0.15, 0.2, 0.4, 0.3)
+local NIGHT_CLEAR   = vmath.vector4(0.15, 0.2, 0.4, 0)
+local NIGHT_SHADOW  = vmath.vector4(0.2, 0.2, 0.1, 0)
+local NIGHT_AMBIENT = vmath.vector4(0.2, 0.2, 0.4, 1.1)
 
 
 local function set_night()
@@ -59,36 +51,17 @@ local function set_night()
 end
 
 
----Start thunder, keeps going forever.
----@param self any
-local function thunder(self)
-	self.thunder_index = (self.thunder_index or 0) + 1
-
-	if self.thunder_index > #T_EASINGS then
-		self.thunder_index = 1
-	end
-
-	local delay = math.random(8, 20)
-	local easing = T_EASINGS[self.thunder_index]
-
-	logger:debug("Thunder in " .. delay .. " seconds.", { tindex = self.thunder_index })
-
-	timer.delay(delay, false, function()
-		go.animate("#", "ambient", go.PLAYBACK_ONCE_FORWARD, THUNDER_AMBIENT, easing, 0.9, 0, function()
-			thunder(self)
-		end)
-	end)
-end
-
-
 function init(self)
 	lumiere.use_effects({ rain })
 
 	set_night()
 
-	go.animate("#", "ambient", go.PLAYBACK_ONCE_FORWARD, THUNDER_AMBIENT, T_EASINGS[1], 0.9, 2, function()
-		thunder(self)
-	end)
+	local thunder = thunder.new({ 1, 2, 1, 2, 1, 1, 1 })
+	thunder
+		:next(2)
+		:strike(function()
+			thunder:storm()
+		end)
 end
 
 

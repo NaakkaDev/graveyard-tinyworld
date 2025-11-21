@@ -1,7 +1,9 @@
 embedded_components {
-  id: "menu_music_01"
+  id: "music_01"
   type: "sound"
-  data: "sound: \"/assets/audio/music/Cute RPG - Fireflies (Loopable).ogg\"\n"
+  data: "sound: \"/assets/audio/music/Silent Voices Loop1.ogg\"\n"
+  "looping: 1\n"
   "group: \"music\"\n"
+  "gain: 0.7\n"
   ""
 }

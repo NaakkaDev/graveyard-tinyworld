@@ -3,6 +3,10 @@ instances {
   id: "render_target_quad"
   prototype: "/light_and_shadows/props/render_target_quad.go"
 }
+instances {
+  id: "audio"
+  prototype: "/main/scenes/game/audio/audio.go"
+}
 scale_along_z: 0
 embedded_instances {
   id: "game"

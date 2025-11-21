@@ -1129,6 +1129,10 @@ instances {
     z: 0.5
   }
 }
+instances {
+  id: "music"
+  prototype: "/main/scenes/game/audio/music.go"
+}
 scale_along_z: 0
 embedded_instances {
   id: "gui"

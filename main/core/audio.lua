@@ -18,7 +18,7 @@ function M.play_music(track)
     -- Set the volume gain to 0.0 so it can be increased
     go.set(music_url, "gain", volume)
     -- Play the music track
-    sound.play(msg.url(nil, "music", track))
+    sound.play(music_url)
     -- Save the track for later use
     current_music_track = track
 
@@ -32,6 +32,7 @@ function M.play_music(track)
         end
     end)
 end
+
 
 ---Stop music by gently fading it out
 ---@param track string
@@ -51,11 +52,13 @@ function M.stop_music(track)
     end)
 end
 
+
 function M.set_volume_gain(new_gain)
     -- Url for the current music
     local music_url = msg.url(nil, "music", new_gain)
 
     go.set(music_url, "gain", new_gain)
 end
+
 
 return M
