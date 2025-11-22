@@ -1048,10 +1048,6 @@ instances {
   }
 }
 instances {
-  id: "lumiere"
-  prototype: "/.defold/assets/lumiere/lumiere.go"
-}
-instances {
   id: "grain"
   prototype: "/lumiere/effects/grain/grain.go"
 }
@@ -1152,6 +1148,10 @@ instances {
     y: 0.96248597
     w: -0.2713315
   }
+}
+instances {
+  id: "lumiere"
+  prototype: "/lumiere/lumiere.go"
 }
 scale_along_z: 0
 embedded_instances {
