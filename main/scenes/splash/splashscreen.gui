@@ -35,20 +35,21 @@ nodes {
   parent: "root"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  enabled: false
 }
 nodes {
   position {
-    x: 489.0
-    y: 215.0
+    x: 640.0
+    y: 360.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+    z: 2.0
   }
   size {
     x: 200.0
     y: 100.0
-  }
-  color {
-    x: 0.6
-    y: 0.6
-    z: 0.6
   }
   type: TYPE_TEXT
   text: "LOADING.."
