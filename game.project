@@ -15,7 +15,8 @@ samples = 4
 input_method = HiddenInputField
 
 [html5]
-scale_mode = stretch
+scale_mode = no_scale
+cssfile = /builtins/manifests/web/dark_theme.css
 
 [project]
 title = graveyard-tinyworld
@@ -45,7 +46,6 @@ enabled = 0
 [event]
 memory_threshold_warning = 50
 
-
 [saver]
 save_name = game.json
 save_folder = game-template
@@ -55,4 +55,7 @@ storage_key = storage
 
 [model]
 max_count = 256
+
+[sound]
+sample_frame_count = 2048
 
