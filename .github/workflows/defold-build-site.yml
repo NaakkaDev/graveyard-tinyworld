@@ -9,7 +9,7 @@ on:
 
 env:
   DEFOLD_VERSION: 1.11.2
-  PROJECT_TITLE: community-challenges
+  PROJECT_TITLE: graveyard-tinyworld
 
 jobs:
   build:
