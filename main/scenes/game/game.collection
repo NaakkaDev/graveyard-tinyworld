@@ -1106,6 +1106,14 @@ instances {
     y: 0.34202015
     w: 0.9396926
   }
+  component_properties {
+    id: "bulb"
+    properties {
+      id: "power"
+      value: "30.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+  }
   scale3 {
     x: 0.5
     y: 0.5
@@ -1132,6 +1140,18 @@ instances {
 instances {
   id: "music"
   prototype: "/main/scenes/game/audio/music.go"
+}
+instances {
+  id: "zombie"
+  prototype: "/main/entities/characters/zombie.go"
+  position {
+    x: 96.44739
+    z: -3.0
+  }
+  rotation {
+    y: 0.96248597
+    w: -0.2713315
+  }
 }
 scale_along_z: 0
 embedded_instances {

@@ -59,16 +59,7 @@ animations {
   images {
     image: "/assets/images/lantern_light-3.png"
   }
-  images {
-    image: "/assets/images/lantern_light-5.png"
-  }
-  images {
-    image: "/assets/images/lantern_light-6.png"
-  }
-  images {
-    image: "/assets/images/lantern_light-7.png"
-  }
   playback: PLAYBACK_LOOP_PINGPONG
-  fps: 5
+  fps: 2
 }
 extrude_borders: 2
