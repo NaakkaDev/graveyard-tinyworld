@@ -2,6 +2,8 @@
 
 Made for Defold ["Community Challenge: Tiny Worlds"](https://forum.defold.com/t/community-challenge-tiny-worlds/81931).
 
+HTML5: [https://naakkadev.github.io/graveyard-tinyworld/](https://naakkadev.github.io/graveyard-tinyworld/)
+
 
 ## Things of Interest:
 `light_and_shadows/light.lua:70`: Added a simple "candle sway" light thingy.

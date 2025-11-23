@@ -46,6 +46,18 @@ key_trigger {
   input: KEY_KP_6
   action: "key_np_6"
 }
+key_trigger {
+  input: KEY_M
+  action: "key_m"
+}
+key_trigger {
+  input: KEY_SPACE
+  action: "key_space"
+}
+key_trigger {
+  input: KEY_ENTER
+  action: "key_enter"
+}
 mouse_trigger {
   input: MOUSE_BUTTON_1
   action: "touch"

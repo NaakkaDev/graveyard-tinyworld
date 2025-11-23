@@ -30,8 +30,8 @@ dependencies#4 = https://github.com/Insality/defold-tweener/archive/refs/tags/5.
 dependencies#5 = https://github.com/Insality/defold-saver/archive/refs/tags/5.zip
 dependencies#6 = https://github.com/d954mas/defold-chronos/archive/refs/tags/1.0.1.zip
 dependencies#7 = https://github.com/baochungit/defold-wrap/archive/master.zip
-dependencies#8 = https://github.com/selimanac/defold-astar/archive/master.zip
-dependencies#9 = https://github.com/britzl/lumiere/archive/master.zip
+dependencies#8 = https://github.com/britzl/lumiere/archive/master.zip
+dependencies#9 = https://github.com/Insality/asset-store/archive/refs/tags/1.zip
 
 [graphics]
 default_texture_min_filter = nearest
@@ -58,4 +58,9 @@ max_count = 256
 
 [sound]
 sample_frame_count = 2048
+
+[render]
+clear_color_red = 0.1
+clear_color_green = 0.1
+clear_color_blue = 0.1
 

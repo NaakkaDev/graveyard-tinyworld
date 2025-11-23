@@ -1,6 +1,7 @@
+script: "/main/scenes/splash/splashscreen.gui_script"
 fonts {
   name: "default"
-  font: "/builtins/fonts/default.font"
+  font: "/assets/fonts/default.font"
 }
 nodes {
   size {
@@ -17,6 +18,7 @@ nodes {
   pivot: PIVOT_SW
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  visible: false
 }
 nodes {
   position {
@@ -42,19 +44,19 @@ nodes {
     x: 640.0
     y: 360.0
   }
-  scale {
-    x: 2.0
-    y: 2.0
-    z: 2.0
-  }
   size {
-    x: 200.0
+    x: 240.0
     y: 100.0
   }
   type: TYPE_TEXT
-  text: "LOADING.."
+  text: "LOADING..."
   font: "default"
   id: "text"
+  outline {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
   parent: "root"
   inherit_alpha: true
 }

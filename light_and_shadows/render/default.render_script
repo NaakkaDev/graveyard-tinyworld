@@ -237,9 +237,9 @@ function update(self)
     --
     local draw_options_world = set_camera_world(state)
     -- L_S Injection
-    draw_options_world.constants = self.constants    -- add our constants to the default camera options
+    draw_options_world.constants = self.constants -- add our constants to the default camera options
     draw_options_world.frustum_planes = render.FRUSTUM_PLANES_ALL
-    update_clear_color(state, constants.clear_color) -- set clear color from the constants module instead message passing
+    -- update_clear_color(state, constants.clear_color) -- set clear color from the constants module instead message passing
 
     --
     -- L_S Injection

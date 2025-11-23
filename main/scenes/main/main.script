@@ -35,8 +35,10 @@ function on_message(self, message_id, message, sender)
 					save.init()
 
 					-- Splash can go away now
-					msg.post("#splashscreenproxy", "unload")
-					msg.post("#", "init_monarch")
+					-- msg.post("#splashscreenproxy", "unload")
+					-- msg.post("#", "init_monarch")
+					msg.post(".", "acquire_input_focus")
+					msg.post("splashscreen:/gui", "continue")
 				end)
 			end)
 		end
@@ -45,5 +47,9 @@ end
 
 
 function on_input(self, action_id, action)
-
+	if action_id and action.pressed then
+		msg.post(".", "release_input_focus")
+		msg.post("#splashscreenproxy", "unload")
+		msg.post("#", "init_monarch")
+	end
 end

@@ -3,6 +3,8 @@ local const = require("main.core.const")
 
 
 function init(self)
+	self.muted = false
+
 	-- "Attach" lanter to keepers hand.
 	local parent = model.get_go("/keeper#model", "arm-right")
 	msg.post("/lantern-keeper#script", const.HASH.SET_PARENT, { parent = parent })
@@ -10,6 +12,8 @@ function init(self)
 	audio.play_music("music_01")
 
 	sound.play("main:/audio#rain")
+
+	msg.post(".", "acquire_input_focus")
 end
 
 
@@ -31,4 +35,13 @@ end
 
 
 function on_input(self, action_id, action)
+	if action.pressed and action_id == const.INPUT.M then
+		if self.muted then
+			audio.play_music("music_01")
+			self.muted = false
+		else
+			audio.stop_music("music_01")
+			self.muted = true
+		end
+	end
 end
