@@ -1,8 +1,6 @@
-local log         = require("log.log")
-logger            = log.get_logger("game.logger")
-local monarch     = require("monarch.monarch")
-local module_main = require("main.system.module_main")
-local save        = require("main.system.systems.save")
+local log     = require("log.log")
+logger        = log.get_logger("game.logger")
+local monarch = require("monarch.monarch")
 
 
 function init(self)
@@ -30,16 +28,11 @@ function on_message(self, message_id, message, sender)
 			msg.post("#splashscreenproxy", "enable")
 			-- Artificial loading time (0.1s)
 			timer.delay(0.1, false, function()
-				module_main.init("/resources/system_settings.json", nil, function()
-					-- Setup saver after all the modules have done their thing
-					save.init()
-
-					-- Splash can go away now
-					-- msg.post("#splashscreenproxy", "unload")
-					-- msg.post("#", "init_monarch")
-					msg.post(".", "acquire_input_focus")
-					msg.post("splashscreen:/gui", "continue")
-				end)
+				-- Splash can go away now
+				-- msg.post("#splashscreenproxy", "unload")
+				-- msg.post("#", "init_monarch")
+				msg.post(".", "acquire_input_focus")
+				msg.post("splashscreen:/gui", "continue")
 			end)
 		end
 	end
