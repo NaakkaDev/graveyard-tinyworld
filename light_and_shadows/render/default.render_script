@@ -325,6 +325,12 @@ function on_message(self, message_id, message)
     local state = self.state
     local camera = state.main_camera
 
+    -- After rigorous testing it seems its better to have
+    -- the `lumiere.on_message` here instead at bottom.
+    -- Resulted in occasional slowdowns/freezes/whatnot
+    -- when the window resized.
+    lumiere.on_message(message_id, message)
+
     if message_id == MSG_CLEAR_COLOR then
         update_clear_color(state, message.color)
     elseif message_id == MSG_WINDOW_RESIZED then
@@ -345,6 +351,4 @@ function on_message(self, message_id, message)
         init_camera(camera, get_fixed_fit_projection, message.near, message.far)
         update_camera(camera, state)
     end
-
-    lumiere.on_message(message_id, message)
 end
