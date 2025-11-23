@@ -1134,10 +1134,6 @@ instances {
   }
 }
 instances {
-  id: "music"
-  prototype: "/main/scenes/game/audio/music.go"
-}
-instances {
   id: "zombie"
   prototype: "/main/entities/characters/zombie.go"
   position {
